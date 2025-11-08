@@ -1,0 +1,179 @@
+/* General container with two columns */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh; /* full viewport height to center vertically */
+    width: 100%;
+    gap: 20px;
+    align-items: center;      /* vertical centering */
+    justify-content: center;
+    margin:0 auto;
+ /* horizontal centering */
+}
+
+/* Left column - form section */
+.first-div-section {
+    height: 75vh;
+    background-color: rgba(0, 0, 0, 0.148);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin: 75px 0 0 45px;
+}
+
+.first-div-section h2 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px cyan;
+    font-size: 35px;
+}
+
+/* Form fields */
+.field-username-section,
+.field-email-section,
+.field-password-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    font-size: 20px;
+    opacity: 0.75;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    color:white;
+}
+
+.User-active-feild-design,
+.mail-active-feild-design {
+    position: absolute;
+    margin-left: 10px;
+}
+
+.eye-active-field-design {
+    position: absolute;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px 0px 10px 45px;
+    width: 28vw;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Button */
+.design-the-button-elements {
+    background-color: orange;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px 0 10px 45px;
+    width: 28vw;
+    outline: none;
+    font-size: 21px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(255, 255, 255, 0.571);
+    text-align: center;
+    margin-top: 18px;
+}
+
+/* Whole sections spacing */
+.whole-username-section,
+.whole-password-section,
+.whole-email-section {
+    margin-top: 18px;
+}
+
+/* Bottom login link */
+.last-element-styling {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 17px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Logo and header text */
+.logo-and-header-name {
+    display: flex;
+    gap: 5px;
+    font-size: 18px;
+    transform: translateY(-50px);
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1.5px;
+}
+
+/* Right image column */
+.signup-image {
+    display: none; /* hidden by default */
+    margin: 75px 0 0 45px;
+
+}
+
+@media (min-width: 1024px) {
+    .signup-image {
+        display: block; /* show on desktop */
+        margin: 75px 0 0 45px;
+    }
+}
+
+
+.signup-image .auth-pattern-inner {
+    max-width: 400px;
+    text-align: center;
+}
+
+.signup-image .auth-pattern-inner h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.signup-image .auth-pattern-inner p {
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr; /* single column on tablets */
+    }
+    .first-div-section {
+        margin: 100px 20px 0 20px;
+        height: auto;
+    }
+    input, .design-the-button-elements {
+        width: 90%; /* full width on smaller screens */
+        padding-left: 45px;
+    }
+    .signup-image {
+        display: none; /* hide image on tablets */
+    }
+}
+
+@media (max-width: 640px) {
+    .first-div-section h2 {
+        font-size: 28px; /* smaller heading */
+    }
+    label {
+        font-size: 13px;
+    }
+    .design-the-button-elements {
+        font-size: 18px;
+        padding-left: 40px;
+    }
+    .logo-and-header-name {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,46 @@
+.auth-pattern-inner {
+  max-width: 400px;
+  text-align: center;
+  color: #fff;
+}
+
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.pattern-square {
+  width: 100%;
+  padding-top: 100%; /* makes a perfect square */
+  background-color: #374151; /* similar to gray-700 */
+  border-radius: 16px;
+  position: relative;
+}
+
+.pulse {
+  animation: pulse-animation 1.5s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.auth-pattern-inner h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.auth-pattern-inner p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
