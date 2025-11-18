@@ -21,7 +21,7 @@ const NoChatSelected = () => {
         <p className="text-base-content/60">
           Select a conversation from the sidebar to start chatting
         </p>
-        <p>I have created this app for you luv.</p>
+        
       </div>
     </div>
   );
