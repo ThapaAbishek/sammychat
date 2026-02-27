@@ -1,6 +1,11 @@
 import axios from "axios";
 
+const BASE_URL =
+  import.meta.env.VITE_API_URL
+    ? `${import.meta.env.VITE_API_URL}/api`
+    : "http://localhost:5001/api";
+
 export const axiosInstance = axios.create({
-  baseURL: "http://192.168.91.205:5001/api",
-  withCredentials: true, 
+  baseURL: BASE_URL,
+  withCredentials: true,
 });
