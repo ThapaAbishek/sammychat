@@ -7,10 +7,10 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 dotenv.config();
 const app=express();
-const PORT =process.env.PORT;
+const PORT = process.env.PORT || 5001;
  connectDB();
 app.use(cors({
-   origin:"http://192.168.91.205:5173",
+   origin:process.env.CLIENT_URL || "http://localhost:5173",
    credentials:true,
 }));
 app.use(express.json());
@@ -18,7 +18,6 @@ app.use(cookieParser());
 
 app.use("/api/auth",authRoutes);
 app.use("/api/messages",messageRoutes);
-app.listen(PORT,()=>{
-   console.log("Server is responding at port:"+PORT);
-  
+app.listen(PORT, "0.0.0.0", () => {
+  console.log("Server is responding at port:" + PORT);
 });
